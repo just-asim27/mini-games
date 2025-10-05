@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Press Start 2P', cursive;
+	background: linear-gradient(135deg, #0d0d0d 0%, #1a0033 50%, #000033 100%);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	text-align: center;
+	line-height: 1.8;
+	letter-spacing: 1px;
+}
+
+h1,
+h2 {
+	letter-spacing: 2px;
+}
+
+header {
+	background-color: #111;
+	padding: 1rem;
+	border-bottom: 2px solid #00ffff;
+}
+
+footer {
+	background-color: #111;
+	padding: 1rem;
+	border-top: 2px solid #00ffff;
+	margin-top: auto;
+	font-size: 0.75rem;
+}
+
+.games-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.game-card {
+	background: #1a1a1a;
+	border: 2px solid #ff00cc;
+	border-radius: 12px;
+	padding: 2rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 0 15px #ff00cc;
+}
+
+.game-card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 20px #ff00cc, 0 0 30px #00ffff;
+}
+
+.game-card a,
+button {
+	display: inline-block;
+	background-color: #00ffff;
+	color: #0d0d0d;
+	text-decoration: none;
+	padding: 0.6rem 1.2rem;
+	border-radius: 8px;
+	margin-top: 1rem;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+	font-size: 0.7rem;
+	border: 2px solid black;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.game-card a:hover,
+button:hover {
+	background-color: #ff00cc;
+	color: #fff;
+	box-shadow: 0 0 10px #ff00cc, 0 0 25px #ff00cc, 0 0 40px #ff00cc;
+}
+
+.back-btn {
+	position: absolute;
+	left: 1rem;
+	background-color: #00ffff;
+	color: #0d0d0d;
+	padding: 0.6rem 1.2rem;
+	border-radius: 8px;
+	font-family: 'Press Start 2P', cursive;
+	cursor: pointer;
+	transition: 0.3s ease;
+	box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+	border: 2px solid black;
+	z-index: 10;
+	font-size: 25px;
+}
+
+.back-btn:hover {
+	background-color: #ff00cc;
+	color: #fff;
+	box-shadow: 0 0 10px #ff00cc, 0 0 25px #ff00cc;
+}
+
+@media (max-width: 900px) {
+	.back-btn {
+		position: fixed;
+	}
+
+	.back-btn.transparent {
+		background: rgba(255, 255, 255, 0.1);
+		color: #00ffff;
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+	}
+}
+
+@media (max-width: 600px) {
+	.back-btn {
+		position: fixed;
+	}
+
+	.back-btn.transparent {
+		background: rgba(255, 255, 255, 0.1);
+		color: #00ffff;
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+	}
+
+	.back-btn {
+		transform: scale(0.8);
+	}
+}

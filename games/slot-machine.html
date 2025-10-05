@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/slot-machine.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="../scripts/ui-effects/back-button.js" defer></script>
+    <script src="../scripts/game-logic/slot-machine.js" defer></script>
+    <title>Slot Machine</title>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='../index.html'">⬅</button>
+    <header>
+        <h1>Slot Machine</h1>
+    </header>
+    <main class="slot-layout">
+        <aside class="bet-selector">
+            <h3>Bet</h3>
+            <div class="bet-options">
+                <button class="bet-btn" data-value="1">1</button>
+                <button class="bet-btn" data-value="5">5</button>
+                <button class="bet-btn" data-value="10">10</button>
+                <button class="bet-btn" data-value="50">50</button>
+                <button class="bet-btn" data-value="100">100</button>
+                <button class="bet-btn" data-value="500">500</button>
+                <button class="bet-btn" data-value="1000">1,000</button>
+                <button class="bet-btn" data-value="5000">5,000</button>
+                <button class="bet-btn" data-value="10000">10,000</button>
+            </div>
+        </aside>
+        <div class="slot-container">
+            <div class="reels">
+                <div class="reel" id="reel1">?</div>
+                <div class="reel" id="reel2">?</div>
+                <div class="reel" id="reel3">?</div>
+            </div>
+            <button id="spinBtn">Spin</button>
+        </div>
+        <aside class="stats-block">
+            <h3>Round <span id="roundDisplay">0</span></h3>
+            <p>Current Winnings <span>$<span id="winningsDisplay">0</span></span></p>
+            <p>Total Entered <span>$<span id="totalMoney">0</span></span></p>
+            <p>Total Winnings <span>$<span id="totalWinnings">0</span></span></p>
+            <button id="resetBtn">Reset</button>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Created by Asim</p>
+    </footer>
+</body>
+</html>
